@@ -2,6 +2,7 @@
 简单的仿微信数字键盘
 ===
 
+![image](https://github.com/ppg408331701/DigitalKeyboard/blob/master/img/ezgif.com-video-to-gif.gif)  
 
 ### 公司有多个项目都需要这样的数字键盘,并不是用来代替传统的keyboard,
 ### 而是在输入类似 PIN码或者支付密码时使用,一般把它放在dialog或者popupwindow中弹出
