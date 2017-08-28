@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="DigitalNumKeyboard">
+        <attr name="DK_text_color" format="color" />
+        <attr name="DK_line_color" format="color" />
+    </declare-styleable>
+
+
+</resources>

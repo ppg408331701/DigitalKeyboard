@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="DK_text_color">#a6a3a3</color>
+    <color name="DK_background_color">#f2f2f2</color>
+    <color name="DK_line_color">#36000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="ksw_md_ripple_normal">#1E000000</color>
+
+
+</resources>
