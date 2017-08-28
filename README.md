@@ -23,6 +23,7 @@ allprojects {
 ```
 
 
+
 <table>
   <tdead>
     <tr>
@@ -41,3 +42,43 @@ allprojects {
     </tr>
   </tbody>
 </table>
+
+
+
+在xml中使用
+```java
+
+ <com.ppg.digitalnumkeyboard.DigitalNumKeyboard
+        android:id="@+id/DigitalNumKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+    </com.ppg.digitalnumkeyboard.DigitalNumKeyboard>
+```
+
+```
+ 	edit = (EditText) findViewById(R.id.edit);
+        digitalNumKeyboard = (DigitalNumKeyboard) findViewById(R.id.DigitalNumKeyboard);
+
+        digitalNumKeyboard.setOnImgBackListener(new DigitalNumKeyboard.OnImgBackListener() {
+            @Override
+            public void ImgBackClickListener() {
+                digitalNumKeyboard.setVisibility(View.GONE);
+            }
+        });
+        digitalNumKeyboard.setOnNumBtnClickListener(new DigitalNumKeyboard.OnNumBtnClickListener() {
+            @Override
+            public void NumBtnClickListener(BtnBean btnBean) {
+                if (btnBean.getBtn_type() == BtnBean.BTN_TYPE_NUM) {
+                    edit.setText(edit.getText().toString() + btnBean.getBtn_text());
+                } else if (btnBean.getBtn_type() == BtnBean.BTN_TYPE_POINT) {
+                    edit.setText(edit.getText().toString() + btnBean.getBtn_text());
+                } else if (btnBean.getBtn_type() == BtnBean.BTN_TYPE_DELETE && edit.getText().length() > 0) {
+                    int index = edit.getText().length();   //获取Edittext光标所在位置
+                    edit.getText().delete(index - 1, index);
+                }
+                edit.setSelection(edit.getText().length());
+            }
+        });
+```
+
